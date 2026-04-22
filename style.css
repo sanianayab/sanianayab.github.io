@@ -545,3 +545,77 @@ footer {
     bottom: 3rem;
   }
 }
+
+/* =========================
+   Talks Layout — sketch-based grid
+   Rows 1-3: talks 1-3 stacked left, carousel spans all 3 rows on right
+   Row 4: talks 4, 5, 6 side-by-side
+   Row 5: talk 7 alone on the left
+   ========================= */
+.talks-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "t1       t1       carousel"
+    "t2       t2       carousel"
+    "t3       t3       carousel"
+    "t4       t5       t6"
+    "t7       .        .";
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Each timeline-item in this layout stretches to fill its grid cell,
+   so stacked talks and the carousel visually line up. */
+.talks-layout .timeline-item {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* The carousel container fills its tall grid cell */
+.talks-layout .talk-img-container {
+  height: 100%;
+  min-height: 520px;
+}
+
+.talks-layout .talk-img-container .talk-carousel {
+  height: 100%;
+  min-height: 520px;
+}
+
+/* Tablet: collapse to 2 columns, carousel below the stacked talks */
+@media (max-width: 1024px) {
+  .talks-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "t1 carousel"
+      "t2 carousel"
+      "t3 carousel"
+      "t4 t5"
+      "t6 t7";
+  }
+}
+
+/* Mobile: single column, everything stacks */
+@media (max-width: 700px) {
+  .talks-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "t1"
+      "t2"
+      "t3"
+      "carousel"
+      "t4"
+      "t5"
+      "t6"
+      "t7";
+  }
+  .talks-layout .talk-img-container,
+  .talks-layout .talk-img-container .talk-carousel {
+    min-height: 360px;
+  }
+}
