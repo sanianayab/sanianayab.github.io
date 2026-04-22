@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Load icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -249,7 +249,7 @@
         </div>
     </section>
 
-<section id="certifications" class="container">
+    <section id="certifications" class="container">
         <h2 class="section-title">Certifications</h2>
         <div class="cert-grid">
             <div class="cert-card">
@@ -290,92 +290,70 @@
         </div>
     </section>
 
+
     <section id="talks" class="container">
         <h2 class="section-title">Conferences and Seminars</h2>
-        <div class="talks-grid">
-            <div class="talk-img-container">
+        <div class="talks-layout">
+            <!-- Left column: talks 1, 2, 3 stacked -->
+            <div class="timeline-item talk-1" style="grid-area: t1;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">ARES 2025: BASS 5th International Workshop on Behavioral Authentication for System Security</h3>
+                <div class="timeline-subtitle">20th International Conference on Availability, Reliability and Security, Ghent, Belgium (11-14 August 2025)</div>
+            </div>
+            <div class="timeline-item talk-2" style="grid-area: t2;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">MTICTI 2021: 1st International Conference on Modern Trends of ICT Industry</h3>
+                <div class="timeline-subtitle">Alrazi University, Sana'a, Yemen (04-06 December 2021)</div>
+            </div>
+            <div class="timeline-item talk-3" style="grid-area: t3;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">14th IEEE ICOSST 2020</h3>
+                <div class="timeline-subtitle">International Conference on Open Source Systems and Technologies, Pakistan (16-17 December 2020)</div>
+            </div>
+
+            <!-- Carousel spans rows 1-3 on the right -->
+            <div class="talk-img-container" style="grid-area: carousel;">
                 <div class="talk-carousel">
-                    <div class="carousel-slide">
+                    <div class="carousel-slide active">
                         <img src="../images/talks_conferences_1ai.jpeg" alt="Academic seminar">
                         <div class="carousel-caption">Seminar Session</div>
                     </div>
-                    <div class="carousel-slide active">
-                        <img src="../images/talks_conferences1i.jpeg" alt="Sania Nayab presenting at ARES 2025, Ghent, Belgium">
+                    <!--<div class="carousel-slide">
+                        <img src="../images/talks_conferences1.jpeg" alt="Conference presentation">
                         <div class="carousel-caption">ARES 2025 · Ghent, Belgium</div>
-                    </div>
-                
-                   <div class="carousel-slide">
+                    </div> -->
+                    <div class="carousel-slide">
                         <img src="../images/talks_conferences3.jpeg" alt="Academic seminar">
                         <div class="carousel-caption">ARES 2025 · Ghent, Belgium</div>
-                    </div> 
+                    </div>
                     <div class="carousel-dots">
                         <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
                         <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                        <!--<button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button> -->
                     </div>
                 </div>
-                <br/>
-                <!-- <div class="talk-carousel">
-                    <div class="carousel-slide active">
-                        <img src="../images/talks_conferences_1ai.jpeg" alt="Sania Nayab presenting at ARES 2025, Ghent, Belgium">
-                         <div class="carousel-caption">ARES 2025 · Ghent, Belgium</div> 
-                    </div> 
-                    <div class="carousel-slide">
-                        <img src="../images/talks_conferences_1a.jpeg" alt="Conference presentation">
-                        <div class="carousel-caption">Conference Talk · 2025</div> -->
-                    </div> 
-                    <!-- <div class="carousel-slide">
-                        <img src="../images/talks_conferences_1c.jpeg" alt="Academic seminar">
-                        <div class="carousel-caption">Seminar Session</div> 
-                    </div> -->
-                    <!-- <div class="carousel-dots">
-                        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                    </div> -->
-                </div> 
-            </div> 
+            </div>
 
-            <div class="talks-content">
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">ARES 2025: BASS 5th International Workshop on Behavioral Authentication for System Security</h3>
-                    <div class="timeline-subtitle">20th International Conference on Availability, Reliability and Security, Ghent, Belgium (11-14 August 2025)</div>
-                </div>
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">MTICTI 2021: 1st International Conference on Modern Trends of ICT Industry</h3>
-                    <div class="timeline-subtitle">Alrazi University, Sana'a, Yemen (04-06 December 2021)</div>
-                </div>
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">14th IEEE ICOSST 2020</h3>
-                    <div class="timeline-subtitle">International Conference on Open Source Systems and Technologies, Pakistan (16-17 December 2020)</div>
-                </div>
+            <!-- Middle row: talks 4, 5, 6 side-by-side -->
+            <div class="timeline-item talk-4" style="grid-area: t4;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">ProQuest's Introduction to Publishing in Academic Journals – Part 2</h3>
+                <div class="timeline-subtitle">ProQuest Education in partnership with HEC Pakistan (15 December 2020)</div>
             </div>
-            <div class="talks-content">
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">ProQuest's Introduction to Publishing in Academic Journals – Part 2</h3>
-                    <div class="timeline-subtitle">ProQuest Education in partnership with HEC Pakistan (15 December 2020)</div>
-                </div>
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">ProQuest's Introduction to Publishing in Academic Journals – Part 1</h3>
-                    <div class="timeline-subtitle">ProQuest Education in partnership with HEC Pakistan (08 December 2020)</div>
-                </div>
-                <div class="timeline-item" style="margin-bottom: 1.5rem">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">HEC Digital Library Collections for Scholarly Research</h3>
-                    <div class="timeline-subtitle">ProQuest Education, HEC Pakistan (14 October 2020)</div>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="timeline-title" style="font-size: 1.1rem">Machine Learning for Signal Processing and Big Data Analytics</h3>
-                    <div class="timeline-subtitle">IEEE Computer Society, FAST National University of Computer and Emerging Sciences (08-09 October 2016)</div>
-                </div>
+            <div class="timeline-item talk-5" style="grid-area: t5;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">ProQuest's Introduction to Publishing in Academic Journals – Part 1</h3>
+                <div class="timeline-subtitle">ProQuest Education in partnership with HEC Pakistan (08 December 2020)</div>
             </div>
-        
-            
-            
+            <div class="timeline-item talk-6" style="grid-area: t6;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">HEC Digital Library Collections for Scholarly Research</h3>
+                <div class="timeline-subtitle">ProQuest Education, HEC Pakistan (14 October 2020)</div>
+            </div>
+
+            <!-- Bottom row: talk 7 alone on the left -->
+            <div class="timeline-item talk-7" style="grid-area: t7;">
+                <h3 class="timeline-title" style="font-size: 1.1rem">Machine Learning for Signal Processing and Big Data Analytics</h3>
+                <div class="timeline-subtitle">IEEE Computer Society, FAST National University of Computer and Emerging Sciences (08-09 October 2016)</div>
+            </div>
         </div>
     </section>
 
-    
-
+   
     <!-- <section id="contact" class="container">
         <h2 class="section-title">Contact</h2>
         <p>
